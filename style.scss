@@ -115,13 +115,6 @@ i.fa {
     margin-bottom: 40px;
   }
 
-  @media (max-width: 1000px) {
-    .card-col {
-      width: 100%;
-    }
-
-  }
-
   .card-con {
     width: 80%;
     min-width: 220px;
@@ -187,27 +180,28 @@ i.fa {
 }
 
 .footer {
-  min-height: 150px;
   background-color: rgb(32, 32, 32);
   color: rgb(250, 250, 250);
   font-size: 10pt;
   border-top: 4px solid rgb(74, 172, 181);
+  padding: 10px 0;
 
-  .left {
+  .wrapper {
+  }
+
+  .col {
     float: left;
     width: 50%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards .card-col {
+    width: 100%;
   }
 
-  .right {
-    float: right;
-    width: 50%;
-  }
-
-  .info {
-    padding: 10px;
-  }
-
-  .contact {
-    padding: 10px;
+  .footer .col {
+    width: 100%;
   }
 }

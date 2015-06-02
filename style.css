@@ -87,9 +87,6 @@ i.fa {
   width: 33.333%;
   float: left;
   margin-bottom: 40px; }
-@media (max-width: 1000px) {
-  .cards .card-col {
-    width: 100%; } }
 .cards .card-con {
   width: 80%;
   min-width: 220px;
@@ -137,20 +134,21 @@ i.fa {
     line-height: 20px; }
 
 .footer {
-  min-height: 150px;
   background-color: #202020;
   color: #fafafa;
   font-size: 10pt;
-  border-top: 4px solid #4aacb5; }
-  .footer .left {
+  border-top: 4px solid #4aacb5;
+  padding: 10px 0; }
+  .footer .col {
     float: left;
-    width: 50%; }
-  .footer .right {
-    float: right;
-    width: 50%; }
-  .footer .info {
-    padding: 10px; }
-  .footer .contact {
-    padding: 10px; }
+    width: 50%;
+    margin-bottom: 1em; }
+
+@media (max-width: 1000px) {
+  .cards .card-col {
+    width: 100%; }
+
+  .footer .col {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
