@@ -12,5 +12,5 @@ $(document).ready(function() {
     });
 	});
 
-  $('#contact .email').html('<a href="' + 'mail' + 'to:' + 'yo' + '@' + 'hakke.net' + '">' + 'yo' + '@' + 'hakke.net' + '</a>');
+  $('#contact .email').html('<a href="' + 'mail' + 'to:' + 'hello' + '@' + 'hakke.net' + '">' + 'hello' + '@' + 'hakke.net' + '</a>');
 });
