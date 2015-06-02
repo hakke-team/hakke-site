@@ -137,7 +137,7 @@ i.fa {
     line-height: 20px; }
 
 .footer {
-  height: 150px;
+  min-height: 150px;
   background-color: #202020;
   color: #fafafa;
   font-size: 10pt;
