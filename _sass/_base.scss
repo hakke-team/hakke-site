@@ -13,14 +13,25 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+ html {
+   font-size: $base-font-size;
+   line-height: $base-line-height;
+
+   @include media-query($on-palm) {
+     font-size: $base-font-size * 0.75;
+     line-height: $base-line-height * 0.8;
+   }
+ }
+
 body {
     font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+
     font-weight: 300;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+
 }
 
 
