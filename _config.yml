@@ -1,0 +1,11 @@
+# Site settings
+title: Hakke
+email: hello@hakke.net
+description: Hakke is a UK based startup focused on building bespoke software for private clients.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://hakke.net" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+markdown: kramdown

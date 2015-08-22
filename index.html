@@ -1,126 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Hey! Just so you know, this site took me ~5 hours from start to finish -->
-  <meta charset="UTF-8">
-  <meta name="description" content="Hakke is a startup based in Surrey, UK focusing on building bespoke software for private clients.">
-  <meta name="keywords" content="web development, web design, design, html, website, build, startup, web apps, dorking, surrey">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#4AACB5">
-  <link rel="icon" href="favicon.ico" type="image/ico" sizes="32x32">
-  <title>Hakke Web Design</title>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" data-viewport-units-buggyfill="ignore">
-  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' data-viewport-units-buggyfill="ignore">
-  <link rel="stylesheet" href="style.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <div class="wrapper">
-        <ul class="menu">
-          <a href="#top"><li class="left"><i class="fa fa-home"></i></li></a>
-          <a href="#about"><li class="right">About</li></a>
-        </ul>
-      </div>
-    </div>
-    <div id="top" class="content">
-      <div class="splash">
-        <div class="logo"></div>
-        <a href="#about"><div class="down"><i class="fa fa-chevron-down"></i></div></a>
-      </div>
-      <div id="about" class="about">
-        <div class="wrapper">
-          <div class="tagline">
-            <h1>We're a team of developers who love the web</h1>
-            <h4>We do design, server-side, and pretty much whatever else you want... <a href="#contact">Hire us</a>?</h4>
-          </div>
-          <div class="cards">
-            <div class="card-col">
-              <div class="card-con">
-                <div class="card">
-                  <div class="cover"><img src="img/scott-cover.png" alt=""></div>
-                  <div class="face"><img src="img/scott.png" alt=""></div>
-                  <div class="info">
-                    <h3>Scott Street<br><small>Design</small></h3>
-                    <ul>
-                      <li><i class="fa fa-glass"></i>Frontend</li>
-                      <li><i class="fa fa-keyboard-o"></i>Javascript</li>
-                      <li><i class="fa fa-apple"></i>Macs</li>
-                    </ul>
-                    <ul>
-                      <li><i class="fa fa-twitter"></i><a href="http://twitter.com/sprusr">@sprusr</a></li>
-                      <li><i class="fa fa-link"></i><a href="http://sprusr.tk">sprusr.tk</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-col">
-              <div class="card-con">
-                <div class="card">
-                  <div class="cover"><img src="img/jase-cover.png" alt=""></div>
-                  <div class="face"><img src="img/jase.png" alt=""></div>
-                  <div class="info">
-                    <h3>Jase Clarkson<br><small>CEO</small></h3>
-                    <ul>
-                      <li><i class="fa fa-credit-card"></i>Business</li>
-                      <li><i class="fa fa-keyboard-o"></i>Node.js</li>
-                      <li><i class="fa fa-line-chart"></i>Trading</li>
-                    </ul>
-                    <ul>
-                      <li><i class="fa fa-twitter"></i><a href="http://twitter.com/JasonClarkson3">@JasonClarkson3</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-col">
-              <div class="card-con">
-                <div class="card">
-                  <div class="cover"><img src="img/will-cover.png" alt=""></div>
-                  <div class="face"><img src="img/will.png" alt=""></div>
-                  <div class="info">
-                    <h3>William Harris<br><small>Technical</small></h3>
-                    <ul>
-                      <li><i class="fa fa-server"></i>Backend</li>
-                      <li><i class="fa fa-keyboard-o"></i>PHP</li>
-                      <li><i class="fa fa-bicycle"></i>Cycling</li>
-                    </ul>
-                    <ul>
-                      <li><i class="fa fa-twitter"></i><a href="http://twitter.com/Hgat0">@Hgat0</a></li>
-                      <li><i class="fa fa-link"></i><a href="http://hgat.co.uk">hgat.co.uk</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <div class="footer">
-        <div class="wrapper">
+---
+layout: default
+---
 
-          <div class="col">
-            <div id="contact" class="contact">
-              <h2>Get in touch</h2>
-              <p><i class="fa fa-envelope-o"></i><span class="email"></span></p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="info">
-              <h3>Hakke is a startup based in Surrey, UK and is focused on building bespoke software for private clients.</h3>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="viewport-units-buggyfill.js"></script>
-  <script>window.viewportUnitsBuggyfill.init();</script>
-  <script src="main.js"></script>
-</body>
-</html>
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
