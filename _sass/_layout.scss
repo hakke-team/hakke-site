@@ -266,6 +266,8 @@
   background-image: url('/img/Traffic-blurred2.jpg');
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 
   .site-header {
     border-bottom: none;
