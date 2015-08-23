@@ -316,6 +316,10 @@
     width: 33.333%;
     float: left;
     margin-bottom: 30px;
+
+    @include media-query(1200px) {
+      width: 100%;
+    }
   }
 
   .card-con {
