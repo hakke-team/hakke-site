@@ -11,7 +11,14 @@
       <div class="wrapper">
         {% for post in site.posts %}
           {% if post.categories contains "work" %}
-          <a class="page-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <div class="work-card">
+            <a href="{{ post.url | prepend: site.baseurl }}"><div class="image" style="background-image: url('{{ post.card-image }}')"></div></a>
+            <div class="text">
+              <h2><a class="page-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+              <p>{{ post.excerpt }}</p>
+              <p class="link"><a href="{{ post.site-link }}">Visit site <small><i class="fa fa-external-link"></i></small></a></p>
+            </div>
+          </div>
           {% endif %}
         {% endfor %}
       </div>
